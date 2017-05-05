@@ -15,10 +15,7 @@ public class TestRequestForLetterSolutions
 	{
 		String validString = "";
 		
-		Request1 requestInstance = new Request1();
-		
-		
-		requestInstance.request("testing");
-		assertTrue(" ", validString.equalsIgnoreCase(requestInstance.request("testing");));
+		Request1 requestInstance = new Request1();		
+		assertTrue(" ", validString.equalsIgnoreCase(requestInstance.request("testing")));
 	}
 }

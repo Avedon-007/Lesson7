@@ -42,5 +42,6 @@ public class Request1
 		sb.deleteCharAt(sb.length()-1); //delete last comma
 		String newString = sb.toString();
 		System.out.println(newString);
+		//return newString;
 	}
 }
