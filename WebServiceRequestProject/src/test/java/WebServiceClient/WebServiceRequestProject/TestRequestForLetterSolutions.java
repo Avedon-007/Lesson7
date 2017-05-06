@@ -1,21 +1,20 @@
 package WebServiceClient.WebServiceRequestProject;
 
 import static org.testng.Assert.assertTrue;
-
-import java.util.Arrays;
-
 import org.testng.annotations.Test;
 
-import com.aonaware.services.webservices.ArrayOfString;
 
 public class TestRequestForLetterSolutions 
 {
+	private String testWord = "testing";
+	private String validString = "setting, testing, ingest, tinges, gents, gites, inset, singe, stein, sting, "
+			+ "stint, tents, tines, tinge, tings, tints, gens, gent, gets, gins, gist, gite, gits, nest, "
+			+ "nets, nett, nits, sent, sett, sign, sine, sing, site, tens, tent, test, ties, tine, ting, tins, tint, tits";
+
 	@Test
-	public void testRequest()
+	public void testRequest() 
 	{
-		String validString = "";
-		
-		Request1 requestInstance = new Request1();		
-		assertTrue(" ", validString.equalsIgnoreCase(requestInstance.request("testing")));
+		Request1 requestInstance = new Request1();
+		assertTrue((requestInstance.request(testWord)).equalsIgnoreCase(validString), "Incorect responce string");
 	}
 }
